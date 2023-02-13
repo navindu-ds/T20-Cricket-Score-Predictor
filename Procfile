@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run predict_1st_innings.py

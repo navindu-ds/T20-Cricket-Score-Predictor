@@ -2,11 +2,6 @@ import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import streamlit as st
 
-pd.plotting.register_matplotlib_converters()
-import matplotlib.pyplot as plt
-import seaborn as sns
-from scipy.stats import norm
-
 import sys
 import math
 
