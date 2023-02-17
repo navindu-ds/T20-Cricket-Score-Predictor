@@ -1,7 +1,7 @@
 import streamlit as st
 import joblib
 import pandas as pd
-import build_and_run
+import score_predictor_v1.build_and_run as build_and_run
 
 st.write("# T20 Cricket Score Predictor")
 st.write("## 1st innings")

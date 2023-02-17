@@ -17,7 +17,7 @@ import joblib
 # importing pathlib to handle paths to csv dataset
 from pathlib import Path 
 
-file_path = Path(__file__).parent.joinpath('Dataset', "processed-data-i1.csv")
+file_path = Path(__file__).parent.parent.joinpath('Dataset', "processed-data-i1.csv")
 base_data_i1 = pd.read_csv(file_path)
 
 global input_data
