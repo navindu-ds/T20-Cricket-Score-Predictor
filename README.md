@@ -1,7 +1,8 @@
 # T20-Score-Predictor
 
-Streamlit Share Link
-https://navindu-ds-t20-cricket-score-predictor-predict-score-z48lnb.streamlit.app/
+Streamlit Share Links
+1. PredictorV1 - https://navindu-ds-t20-cricket-score-predictor-predictorv1-zzqcdj.streamlit.app/
+2. PredictorV2 - https://navindu-ds-t20-cricket-score-predictor-predictorv2-c96wwu.streamlit.app/
 
 This program is designed to aid cricket fans make a fair estimate of how the cricket match will progress by; 
 1. making an estimate on the innings total of the team batting first and,
