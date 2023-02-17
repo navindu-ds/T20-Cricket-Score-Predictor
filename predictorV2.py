@@ -28,3 +28,5 @@ expected_runs = int(model.predict(input_data))
 
 if st.button("Predict"):
     st.write("## Prediction " + str(expected_runs + input_runs))
+
+st.write("check out the [source code](https://github.com/navindu-ds/T20-Cricket-Score-Predictor)")

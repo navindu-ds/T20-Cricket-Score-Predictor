@@ -1,5 +1,4 @@
 import streamlit as st
-import joblib
 import pandas as pd
 import score_predictor_v1.build_and_run as build_and_run
 
@@ -27,3 +26,5 @@ input_data = pd.DataFrame( {'Over' : [input_over] , 'Inn_Score_atm' : [input_run
 
 if st.button("Predict"):
     build_and_run.display_outputs_i1(min_score,max_score,pred_score,err,proj_RunR)
+
+st.write("check out the [source code](https://github.com/navindu-ds/T20-Cricket-Score-Predictor)")
