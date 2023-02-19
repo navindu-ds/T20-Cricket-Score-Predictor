@@ -1,13 +1,13 @@
 # T20-Score-Predictor
 
-Streamlit Share Links
-1. PredictorV1 - https://navindu-ds-t20-cricket-score-predictor-predictorv1-zzqcdj.streamlit.app/
-2. PredictorV2 - https://navindu-ds-t20-cricket-score-predictor-predictorv2-c96wwu.streamlit.app/
+## Streamlit Share App Links
+1. [PredictorV1](https://navindu-ds-t20-cricket-score-predictor-predictorv1-zzqcdj.streamlit.app/)
+2. [PredictorV2](https://navindu-ds-t20-cricket-score-predictor-predictorv2-c96wwu.streamlit.app/)
 
+## Introduction
 This program is designed to aid cricket fans make a fair estimate of how the cricket match will progress by; 
 1. making an estimate on the innings total of the team batting first and,
 2. providing an indicator of how well the team batting second is chasing the target,
-
 at a midway stage of the innings.
 
 The program uses Machine Learning Libraries such as 
@@ -24,8 +24,14 @@ For the test data in order to train the program, ball by ball data from the matc
 
 Our basic assusmption is that the run scoring will be independent of who the teams are, or grounds where they played, or when they have played these matches used in the test data
 
+## Predictor V1
+
 In this model design, the program will select the cases which are similar to the inputted data such as based on the overs remaining and the wickets remaining. These two features are considered as the main two parameters that effect the availability of resources for a team to score a certain total of runs. This is the same idealogy adopted by the Duckworth-Lewis-Stern method in handling match scenarios with weather related interruptions. 
 
 It is only with the selected data, the predictive model is built.
+
+## Predictor V2
+
+This model was designed to allow an easily deployable model to be used as an web application. For this purpose a generalized model using all available data was used to form thw model.
 
 Nevertheless, cricket is very unpredictable game which is one of the reasons it is such an enjoyable soprt to watch. Therefore more often than not match predictions will fluctuate as the match further progresses.
