@@ -1,14 +1,12 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import joblib
 import plotly.express as px
+from st_aggrid import AgGrid, GridOptionsBuilder
 
 st.markdown("# Timeline of Final Predicted Score")
 st.sidebar.markdown("# Timeline of Final Predicted Score")
 st.sidebar.markdown("Check how the Score Prediction varies at each stage of the match")
-
-from st_aggrid import AgGrid, GridOptionsBuilder
 
 df_template = pd.DataFrame(
     '',
