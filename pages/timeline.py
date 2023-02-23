@@ -77,4 +77,4 @@ if button:
     fig.update_yaxes(title_text="Runs Scored per Over", secondary_y=True)
     fig.update_layout(yaxis2_range=[0,40])
     fig.update_yaxes(secondary_y=True, showgrid=False)
-    fig.show()
+    st.plotly_chart(fig)
