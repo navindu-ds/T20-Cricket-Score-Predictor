@@ -55,11 +55,11 @@ for i in range(3,18):
                             'R_Rate_atm': [input_RunR] ,  'Ptnr_Avg_atm': [input_PAvg] , 'L3_Wicks': [input_L3Ws],
                             'L3_Runs': [input_L3Rs] })
 
-    prediction =  input_runs - int(response.data.loc[i-1,'Current Score'])
+    prediction =  input_runs + int(model.predict(input_data))
     response.data.loc[i,'Current RunRate'] = round(input_runs/input_over,2)
-    response.data.loc[i,'Runs in the Over'] = prediction
+    response.data.loc[i,'Runs in the Over'] = input_runs - int(response.data.loc[i-1,'Current Score'])
     response.data.loc[i,'Wickets in the Over'] = input_wick - int(response.data.loc[i-1,'Wickets Lost'])
-    response.data.loc[i,'Prediction'] = input_runs + int(model.predict(input_data))
+    response.data.loc[i,'Prediction'] = prediction
     response.data.loc[i,'Projected RunRate'] = round((prediction-input_runs)/(20-input_over))
 
 if button:
