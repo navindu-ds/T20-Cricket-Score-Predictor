@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import score_predictor_v1.build_and_run as build_and_run
+import predictor_pro_model.build_and_run as build_and_run
 
 st.markdown("# T20 Score Predictor")
 st.sidebar.markdown("# T20 Score Predictor")

@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import score_predictor_v1.build_and_run as build_and_run
+import predictor_pro_model.build_and_run as build_and_run
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from st_aggrid import AgGrid, GridOptionsBuilder
