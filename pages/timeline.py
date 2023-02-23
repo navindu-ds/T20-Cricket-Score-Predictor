@@ -53,7 +53,6 @@ for i in range(3,18):
     response.data.loc[i,'Wickets in the Over'] = input_wick - int(response.data.loc[i-1,'Wickets Lost'])
 
 if button:
-    st.write(response.data.loc[3:])
 
     fig = make_subplots(specs=[[{"secondary_y" : True}]])
     fig.add_trace(
@@ -78,3 +77,5 @@ if button:
     fig.update_layout(yaxis2_range=[0,40])
     fig.update_yaxes(secondary_y=True, showgrid=False)
     st.plotly_chart(fig)
+
+    st.write(response.data.loc[3:])
