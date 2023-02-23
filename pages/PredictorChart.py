@@ -7,7 +7,10 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 
 st.markdown("# Timeline of Final Predicted Score")
 st.sidebar.markdown("# Timeline of Final Predicted Score")
-st.sidebar.markdown("Check how the Score Prediction varies at each stage of the match")
+st.sidebar.markdown("**Use to visualize the variation in the Score Prediction at each stage of the innings.**")
+st.sidebar.markdown("Implemented using the web version machine learning model for the predictions.")
+st.sidebar.markdown("You can start entering data at any point of the game.")
+st.sidebar.markdown("Note you need at least 4 entries of data to generate the first prediction.")
 
 df_template = pd.DataFrame(
     '',
@@ -24,8 +27,12 @@ gb.configure_columns(["Current Score","Wickets Lost"], editable = True)
 gb.configure_default_column(min_column_width=7)
 gridOptions = gb.build()
 
+st.markdown("#### Enter the Input Runs Scored and Wickets Lost at the end of the overs given below as the match goes along")
+st.markdown("#### Click on the _Submit_ button below to generate the predictor chart for data enetered.")
+st.markdown("###### You can start entering data at any point of the game.")
+st.markdown("###### Note you need at least 4 entries of data to generate the first prediction.")
 with st.form('example form') as f:
-    st.header('Input Runs Scored and Wickets Lost at each over of the match')
+    st.header('Enter Over-by-Over data')
     response = AgGrid(df_template, gridOptions=gridOptions, columns_auto_size_mode=True, fit_columns_on_grid_load=False)
     button = st.form_submit_button()
 
@@ -48,9 +55,12 @@ for i in range(3,18):
                             'R_Rate_atm': [input_RunR] ,  'Ptnr_Avg_atm': [input_PAvg] , 'L3_Wicks': [input_L3Ws],
                             'L3_Runs': [input_L3Rs] })
 
-    response.data.loc[i,'Runs in the Over'] = input_runs - int(response.data.loc[i-1,'Current Score'])
+    prediction =  input_runs - int(response.data.loc[i-1,'Current Score'])
+    response.data.loc[i,'Current RunRate'] = round(input_runs/input_over,2)
+    response.data.loc[i,'Runs in the Over'] = prediction
     response.data.loc[i,'Wickets in the Over'] = input_wick - int(response.data.loc[i-1,'Wickets Lost'])
     response.data.loc[i,'Prediction'] = input_runs + int(model.predict(input_data))
+    response.data.loc[i,'Projected RunRate'] = round((prediction-input_runs)/(20-input_over))
 
 if button:
 
@@ -78,4 +88,6 @@ if button:
     fig.update_yaxes(secondary_y=True, showgrid=False)
     st.plotly_chart(fig)
 
-    st.write(response.data.loc[3:])
+    st.markdown("**Score Predictions Tabulated**")
+    cols_to_display = ['Over','Prediction','Current RunRate','Projected RunRate']
+    st.write(response.data.loc[3:,cols_to_display])

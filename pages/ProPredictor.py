@@ -2,13 +2,15 @@ import streamlit as st
 import pandas as pd
 import score_predictor_v1.build_and_run as build_and_run
 
-st.markdown("# Predictor Version 1")
-st.sidebar.markdown("# Predictor Version 1")
+st.markdown("# T20 Score Predictor")
+st.sidebar.markdown("# T20 Score Predictor")
+st.sidebar.markdown("## Pro Version")
+st.sidebar.markdown("### For Local Execution Only")
 st.sidebar.markdown("Selects appropriate data from the overall dataset based on number of overs remaining and wickets lost.")
 st.sidebar.markdown("Trains a new ML model based on input data given.")
-st.sidebar.markdown("Computationally expensive and would take time to implement through the web interface.")
+st.sidebar.markdown("Computationally expensive and advised to run a local copy of this application for execution.")
 
-st.write("## 1st innings")
+st.write("## Pro Version - For Local Execution Only")
 
 col1,col2 = st.columns(2)
 input_over = col1.number_input("Enter no of Overs played: ",min_value=5, max_value=19, step=1)
@@ -18,9 +20,9 @@ input_L3Sc = col2.number_input("Enter the Innings Total at the end of over no. "
 input_L3Ws = col2.number_input("Enter number of wickets lost after over no. " + str(input_over-3) + " : ", min_value=0, max_value=input_wick, step=1)
 
 input_RunR = round((input_runs/input_over),2)
-st.write("Current Run Rate : " + str(input_RunR) )
+st.markdown("**Current Run Rate : " + str(input_RunR) + "**")
 input_L3Rs = input_runs - input_L3Sc
-st.write("Last 3 overs : " + str(input_L3Rs) + "/" + str(input_L3Ws))
+st.markdown("**Last 3 overs : " + str(input_L3Rs) + "/" + str(input_L3Ws) + "**")
 input_PAvg = round((input_runs/(input_wick + 1)),2)
 
 input_data = pd.DataFrame( {'Over' : [input_over] , 'Inn_Score_atm' : [input_runs] , 'Inn_Wicks_atm': [input_wick],

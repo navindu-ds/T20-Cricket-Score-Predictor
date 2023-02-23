@@ -8,7 +8,20 @@ from st_aggrid import AgGrid, GridOptionsBuilder
 
 st.markdown("# Timeline of Final Predicted Score")
 st.sidebar.markdown("# Timeline of Final Predicted Score")
-st.sidebar.markdown("Check how the Score Prediction varies at each stage of the match")
+st.sidebar.markdown("## Pro Version")
+st.sidebar.markdown("### For Local Execution Only")
+st.sidebar.markdown("**Use to visualize the variation in the Score Prediction at each stage of the innings.**")
+st.sidebar.markdown("Implemented using the specialized data selection machine learning model for the predictions.")
+st.sidebar.markdown("Computationally expensive and advised to run a local copy of this application for execution.")
+st.sidebar.markdown("May take a few seconds to run.")
+st.sidebar.markdown("You can start entering data at any point of the game.")
+st.sidebar.markdown("Note you need at least 4 entries of data to generate the first prediction.")
+
+st.write("## Pro Version - For Local Execution Only")
+st.markdown("#### Enter the Input Runs Scored and Wickets Lost at the end of the overs given below as the match goes along")
+st.markdown("#### Click on the _Submit_ button below to generate the predictor chart for data enetered.")
+st.markdown("###### You can start entering data at any point of the game.")
+st.markdown("###### Note you need at least 4 entries of data to generate the first prediction.")
 
 df_template = pd.DataFrame(
     '',
