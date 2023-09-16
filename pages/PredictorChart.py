@@ -36,6 +36,9 @@ with st.form('example form') as f:
     response = AgGrid(df_template, gridOptions=gridOptions, columns_auto_size_mode=True, fit_columns_on_grid_load=False)
     button = st.form_submit_button("Submit")
 
+    if button:
+        pass 
+
 model = joblib.load('gen_1st_inn_model.pkl')
 
 for i in range(3,18):
