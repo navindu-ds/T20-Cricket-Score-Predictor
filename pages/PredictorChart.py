@@ -34,7 +34,7 @@ st.markdown("###### Note you need at least 4 entries of data to generate the fir
 with st.form('example form') as f:
     st.header('Enter Over-by-Over data')
     response = AgGrid(df_template, gridOptions=gridOptions, columns_auto_size_mode=True, fit_columns_on_grid_load=False)
-    button = st.form_submit_button()
+    button = st.form_submit_button("Submit")
 
 model = joblib.load('gen_1st_inn_model.pkl')
 
