@@ -10,6 +10,7 @@ Refer the streamlit documentation for installation process depending on your ope
 1. [Windows](https://docs.streamlit.io/library/get-started/installation#install-streamlit-on-windows)
 2. [MacOS/Linux](https://docs.streamlit.io/library/get-started/installation#install-streamlit-on-macoslinux)
 Use the following code in the streamlit supported environment to run the application
+
 ```python -m streamlit run App.py```
 
 ## Introduction
