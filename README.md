@@ -11,6 +11,7 @@ Click [here](https://t20-cricket-score-predictor-web.streamlit.app/)
 It is required to install [Streamlit](https://streamlit.io/) on your device to run this application locally.
 
 Clone this application from github using
+
 ```git clone github.com/navindu-ds/T20-Cricket-Score-Predictor```
 
 Refer the streamlit documentation for installation process depending on your operating system.
