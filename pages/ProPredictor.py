@@ -14,7 +14,6 @@ st.write("## Pro Version - For Local Execution Only")
 
 if (st.session_state):
     # Show the page content
-    st.write(st.session_state)
 
     st.markdown("# T20 Score Predictor")
     st.sidebar.markdown("# T20 Score Predictor")

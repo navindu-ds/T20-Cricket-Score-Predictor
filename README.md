@@ -1,10 +1,17 @@
 # T20-Score-Predictor
 
 ## Streamlit Share App
-Click [here](https://navindu-ds-t20-cricket-score-predictor-app-ycpfru.streamlit.app/)
+Click [here](https://t20-cricket-score-predictor-web.streamlit.app/)
+
+### Note to user
+- The Pro Version application which uses trains the model realtime is blocked in the web version.
+- The Timeline of Predicted Score form can only be rendered in local execution of the application.
 
 ## Instructions to run Application Locally
 It is required to install [Streamlit](https://streamlit.io/) on your device to run this application locally.
+
+Clone this application from github using
+```git clone github.com/navindu-ds/T20-Cricket-Score-Predictor```
 
 Refer the streamlit documentation for installation process depending on your operating system.
 1. [Windows](https://docs.streamlit.io/library/get-started/installation#install-streamlit-on-windows)
@@ -37,7 +44,7 @@ The original dataset was obtained from the following [link](https://www.kaggle.c
 
 ## General Predictor Version 
 
-This model was designed to allow an easily deployable model to be used as an web application. For this purpose a generalized model using all available data was used to form thw model.
+This model was designed to allow an easily deployable model to be used as an web application. For this purpose a generalized model using all available data was used to form the model.
 
 ## Pro Predictor version
 
