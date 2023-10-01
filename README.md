@@ -3,6 +3,16 @@
 ## Streamlit Share App
 Click [here](https://navindu-ds-t20-cricket-score-predictor-app-ycpfru.streamlit.app/)
 
+## Instructions to run Application Locally
+It is required to install [Streamlit](https://streamlit.io/) on your device to run this application locally.
+
+Refer the streamlit documentation for installation process depending on your operating system.
+1. [Windows](https://docs.streamlit.io/library/get-started/installation#install-streamlit-on-windows)
+2. [MacOS/Linux](https://docs.streamlit.io/library/get-started/installation#install-streamlit-on-macoslinux)
+Use the following code in the streamlit supported environment to run the application
+
+```python -m streamlit run App.py```
+
 ## Introduction
 Currently this application is deployed for the purposes of inferring information about the first innings of a T20 cricket match.
 This application is designed to aid cricket fans make a fair estimate of how the cricket match will progress by; 
