@@ -1,7 +1,7 @@
 <h1 align="center"> 🏏 T20-Score-Predictor 🏏 </h1>
 
 <p align="center">
-     <img src="https://github.com/navindu-ds/T20-Cricket-Score-Predictor/blob/UpDateReadMe-V1/assets/T20-Cricket-App-Banner.png"/>
+     <img src="https://github.com/navindu-ds/T20-Cricket-Score-Predictor/blob/main/assets/T20-Cricket-App-Banner.png"/>
 </p>
 
 Welcome to the T20 Score Predictor! Stay ahead in the game, 📈 and elevate ✨ your cricket experience 🏏 with our simple prediction tool.
