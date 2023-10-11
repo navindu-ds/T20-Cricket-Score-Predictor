@@ -8,6 +8,8 @@ st.sidebar.markdown("# The T20 Cricket Score Predictor App 🏏")
 st.sidebar.markdown("**source code on [github](https://github.com/navindu-ds/T20-Cricket-Score-Predictor)**")
 st.sidebar.markdown("*Currently* modelled only for **1st Innings** predictions")
 
+st.markdown("## Click [here](Predictor) for a quick prediction!")
+
 st.markdown("### Run the application locally to use all features")
 
 st.markdown("### Instructions to run Application Locally")
