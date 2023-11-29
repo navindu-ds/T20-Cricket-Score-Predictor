@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import predictor_pro_model.build_and_run as build_and_run
+import predictor_pro_model.build_and_runv2 as build_and_run
 
 st.markdown("# T20 Score Predictor")
 st.sidebar.markdown("# T20 Score Predictor")
@@ -41,10 +41,10 @@ if (st.session_state):
                                 'R_Rate_atm': [input_RunR] ,  'Ptnr_Avg_atm': [input_PAvg] , 'L3_Wicks': [input_L3Ws],
                                 'L3_Runs': [input_L3Rs] })
 
-    (min_score,max_score,pred_score,err,proj_RunR) = build_and_run.obtain_data_t20_i1(input_data)
+    # (min_score,max_score,pred_score,err,proj_RunR) = build_and_run.obtain_data_t20_i1(input_data)
 
     if st.button("Predict"):
-        build_and_run.display_outputs_i1(min_score,max_score,pred_score,err,proj_RunR)
+        build_and_run.predict_t20_i1(input_data)
 else:
     st.markdown("Computationally expensive and advised to run a local copy of this application for execution.")
 
